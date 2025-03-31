@@ -1,0 +1,48 @@
+.content {
+  background-color: #1a365d;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: white;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+}
+
+.fruit-animation {
+  position: relative;
+  height: 400px;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.fruit {
+  position: absolute;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fruit.shrunk {
+  transform: scale(0.5);
+}
+
+.fruit-1 { top: 10%; left: 10%; }
+.fruit-2 { top: 20%; right: 15%; }
+.fruit-3 { top: 40%; left: 20%; }
+.fruit-4 { top: 30%; right: 25%; }
+.fruit-5 { top: 60%; left: 15%; }
+.fruit-6 { top: 50%; right: 20%; }
+.fruit-7 { top: 70%; left: 25%; }
+.fruit-8 { top: 80%; right: 15%; } 

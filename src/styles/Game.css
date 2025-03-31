@@ -1,0 +1,349 @@
+.game-container {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(400px, 2fr) minmax(200px, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 4rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  align-self: start;
+}
+
+.game-card {
+  background-color: #1a365d;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: white;
+}
+
+.game-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slider-container {
+  margin-bottom: 0.5rem;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.slider {
+  width: 100%;
+}
+
+.new-game-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-game-button.won {
+  background-color: #4BB543;
+}
+
+.new-game-button.in-progress {
+  background-color: #e53e3e;
+}
+
+.game-history {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.history-item {
+  background-color: #2c5282;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.history-code {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.history-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-board {
+  position: relative;
+  align-self: start;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cheat-button-container {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cheat-button-wrapper {
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cheat-button {
+  position: absolute;
+  background-color: #2c5282;
+  color: #a0aec0;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.timer-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.timer {
+  font-size: 1.2rem;
+  color: #a0aec0;
+  padding: 0.5rem 1rem;
+  background-color: #2c5282;
+  border-radius: 4px;
+}
+
+.hidden-key {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.key-circle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #2c5282;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.past-guesses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.guess-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem;
+  background-color: #2c5282;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  width: fit-content;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  background-color: #1a365d;
+  padding: 0.25rem;
+  border-radius: 4px;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.feedback-peg {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.feedback-peg.white {
+  font-size: 0.7rem;
+}
+
+.guess-fruits {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 2rem;
+}
+
+.current-guess {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.guess-circle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #2c5282;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.guess-circle.active {
+  outline: 2px solid #4A90E2;
+  outline-offset: 2px;
+}
+
+.fruit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.fruit-button {
+  font-size: 2rem;
+  padding: 0.5rem;
+  border: none;
+  background: #2c5282;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.1s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.fruit-button:disabled {
+  background: #1a365d;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.guess-button {
+  padding: 0.75rem;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.guess-button:disabled {
+  background-color: #2c5282;
+  cursor: not-allowed;
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dialog-content {
+  background-color: #1a365d;
+  padding: 2rem;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.dialog-title {
+  margin-bottom: 1rem;
+}
+
+.dialog-message {
+  margin-bottom: 1.5rem;
+}
+
+.dialog-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.dialog-button {
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dialog-button.confirm {
+  background-color: #e53e3e;
+}
+
+.dialog-button.cancel {
+  background-color: #2c5282;
+}
+
+.win-message {
+  text-align: center;
+  padding: 2rem;
+  background-color: #4BB543;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease-in;
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 

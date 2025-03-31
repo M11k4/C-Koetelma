@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.navbar {
+  background-color: #1a365d;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.navbar-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-logo {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-logo img {
+  height: 2rem;
+}
+
+.navbar-title {
+  font-size: 1.1rem;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-title.clickable {
+  cursor: pointer;
+}
+
+.navbar-title.clickable:hover {
+  opacity: 0.9;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: opacity 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-links a:hover {
+  opacity: 0.9;
+}
+
+.navbar-links a.active {
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+} 
